@@ -1,0 +1,17 @@
+PROBLEM: I/P-> S="Programming in C++"
+         O/P-> "PiC"
+         
+SOLUTION:
+
+string firstAlphabet(string S)
+	{
+	    string str="";
+	    str=str+S[0];
+	    for(auto i=S.begin(); i!=S.end(); i++){
+	        if(*i==' '){
+	            
+	            str=str+*(i+1);
+	        }
+	    }
+	    return str;
+	}
