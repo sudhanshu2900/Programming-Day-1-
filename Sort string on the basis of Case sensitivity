@@ -1,0 +1,38 @@
+PROBLEM:  I/P-> str = defRTSersUXI
+          O/p-> deeIRSfrsTUX
+
+
+SOLUTION:
+
+string caseSort(string str, int n){
+    
+    string S="", res="";                                       //Create 2 strings
+    for(auto a=str.begin(); a!=str.end(); a++){                //Copy string str to string S
+        S+=*a;
+    }
+    sort(S.begin(), S.end());                                  //Sort String S
+    
+    for(auto i=str.begin(); i!=str.end(); i++){                //It compare every elemnt of string Str to string S and put element of S into string 'res'  
+        if(*i>='a' && *i<='z'){                                
+            for(auto it=S.begin(); it!=S.end(); it++){
+                if(*it>='a' && *it<='z'){
+                    res+=*it;
+                    *it=' ';
+                    break;
+                }
+            }
+            
+        }
+        if(*i>='A' && *i<='Z'){
+            for(auto it=S.begin(); it!=S.end(); it++){
+                if(*it>='A' && *it<='Z'){
+                    res+=*it;
+                    *it=' ';
+                    break;
+                }
+            }
+            
+        }
+    }
+    return res;
+}
