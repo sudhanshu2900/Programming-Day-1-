@@ -1,0 +1,14 @@
+PROBLEM: I/P-> S = "ABCddE"
+         O/P-> "abcdde"
+         
+SOLUTION:
+
+string toLower(string S) {
+        
+        for(auto i=S.begin(); i!=S.end(); i++){
+            if(*i>='A' && *i<='Z'){
+                *i+=32;
+            }
+        }
+        return S;
+    }
