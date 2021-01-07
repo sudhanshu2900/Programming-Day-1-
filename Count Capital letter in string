@@ -1,0 +1,15 @@
+PROBLEM: I/P-> S="ckjkUUYII"
+         O/P-> 5
+         
+SOLUTION:
+
+int countCamelCase (string s)
+    {
+    	int c=0;
+    	for(auto i=s.begin();i!=s.end();i++){
+    	    if(*i>='A' && *i<='Z'){
+    	        c++;
+    	    }
+    	}
+    	return c;
+    }
